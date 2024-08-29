@@ -1,3 +1,5 @@
 import React from "react";
 
-export default () => <h1>Welcome to Second Post!</h1>
+export default function SecondBlod() {
+  return <h1>Welcome to Second Post!</h1>;
+}
