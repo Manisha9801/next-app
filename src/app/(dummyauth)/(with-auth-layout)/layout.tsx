@@ -1,3 +1,6 @@
+//In this layout children is replaced by LoginPage and registerPage, But it will not be shared with forgot password page.
+
+import React from "react";
 export default function AuthLayout({
   children,
 }: {

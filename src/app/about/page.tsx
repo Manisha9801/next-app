@@ -1,3 +1,7 @@
-export default function About() {
-  return <h1>Hello from About!</h1>;
+export const metadata = {
+  title : "About Codevolution"
+}
+
+export default function about() {
+  return <h1>About me!</h1>;
 }
