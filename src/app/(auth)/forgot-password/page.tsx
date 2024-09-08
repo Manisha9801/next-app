@@ -1,5 +1,5 @@
 export default  function ForgotPassword() {
   return (
-    <h1>ForgotPassword</h1>
+    <h1>ForgotPassword from Auth Link</h1>
   )
 }
