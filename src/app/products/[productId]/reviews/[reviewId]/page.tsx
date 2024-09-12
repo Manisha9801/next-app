@@ -13,7 +13,7 @@ export default function Reviews({
 }) {
   const random = getRandomInt(2);
   if (random === 1) {
-    throw new Error("Error in Review Id !! ");
+    throw new Error("Error in Loading Review Id !! ");
   }
   if (parseInt(params.reviewId) > 1000) {
     notFound();
