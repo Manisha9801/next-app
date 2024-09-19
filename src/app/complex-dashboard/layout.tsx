@@ -3,15 +3,19 @@ export default function ComplexDashboardLayout({
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+  return isLoggedIn ? (
     <div>
-     <div>{children}</div>    {/* This children is equivalent to complex-dashboard/@children/page.tsx*/}
+      <div>{children}</div>{" "}
+      {/* This children is equivalent to complex-dashboard/@children/page.tsx*/}
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div>{users}</div>
@@ -19,7 +23,9 @@ export default function ComplexDashboardLayout({
         </div>
         <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
       </div>
-      <img  src="http://localhost:3000/assets/img.png"/>
+      <img src="http://localhost:3000/assets/img.png" />
     </div>
+  ) : (
+    login
   );
 }
