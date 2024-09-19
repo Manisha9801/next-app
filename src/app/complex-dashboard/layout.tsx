@@ -19,7 +19,7 @@ export default function ComplexDashboardLayout({
         </div>
         <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
       </div>
-      <img  src="./assets/img.png"/>
+      <img  src="http://localhost:3000/assets/img.png"/>
     </div>
   );
 }
