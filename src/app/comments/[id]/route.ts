@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { redirect } from "next/navigation";
 import { comments } from "../data";
 
 export async function GET(
   _request: NextRequest, //Pre-fix it with underscore since we are not using request parameter.
   { params }: { params: { id: string } }
 ) {
+  if (parseInt(params.id) > comments.length) {
+    redirect("/comments");    //status code 307-indicates a temporary re-direct.
+  }
   const comment = comments.find(
     (comment) => comment.id === parseInt(params.id)
   );
@@ -25,7 +29,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  _request: NextRequest,
+  _request: NextRequest, //Pre-fix it with underscore since we are not using request parameter.
   { params }: { params: { id: string } }
 ) {
   const deletedCommentIndex = comments.findIndex(
