@@ -12,7 +12,8 @@ export async function GET(request: NextRequest) {
   console.log(requestHeaders.get("Authorization"));
   console.log(headerList.get("Authorization"));
   console.log("theme", theme);
-  console.log("theme", cookies().get("resultsPerPage"));
+  console.log("resultsPerPage", cookies().get("resultsPerPage"));
+  console.log("theme", cookies().get("theme"));
 
   return new NextResponse("<h1>Profile api call</h1>", {
     headers: {
